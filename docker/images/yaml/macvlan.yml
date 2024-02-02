@@ -1,0 +1,15 @@
+---
+version: '3'
+services:
+
+networks:
+  dev_net:
+    name: dev_net
+    driver: macvlan
+    driver_opts:
+      parent: ens160
+    ipam:
+      config:
+        - subnet: "192.168.86.0/23"
+          ip_range: "192.168.86.128/28"
+          gateway: "192.168.86.1"

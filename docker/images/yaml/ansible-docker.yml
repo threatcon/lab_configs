@@ -1,0 +1,22 @@
+name: development
+services:
+  development:
+    hostname: ansible-docker
+    stdin_open: true
+    tty: true
+    container_name: ansible
+    ports:
+      - "22:22/tcp"
+      - "3389:3389/tcp"
+    image: ansible:beta
+    restart: unless-stopped
+    volumes: # store your data between container upgrades
+      - "/home/tonio/coding/docker/ansible/:/home/tonio/coding/"
+    networks:
+      dev_lan:
+        ipv4_address: 192.168.86.192
+      
+networks:
+   dev_lan:
+      name: dev_lan
+      external: true
