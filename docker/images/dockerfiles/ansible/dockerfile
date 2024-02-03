@@ -16,8 +16,9 @@ RUN DEBIAN_FRONTEND=noninteractive \
 
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python3.12 \
+  && apt-get install -y python3.12-venv \
   && apt-get install -y net-tools \
-  && apt-get install -y netutils-ping
+  && apt-get install -y inetutils-ping
 
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
@@ -27,11 +28,11 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 
 EXPOSE 22
 
-RUN python3.12 -m venv /home/tonio/ansible_env
-RUN . /home/tonio/ansible_env/bin/activate
-RUN pip install --upgrade pip
-RUN pip install ansible
-RUN pip install ansible-lint
-RUN deactivate
-
-CMD service ssh start ; bash 
+RUN python3.12 -m venv /home/tonio/ansible_env \
+  && . /home/tonio/ansible_env/bin/activate \
+  && pip install --upgrade pip \
+  && pip install ansible \ 
+  && pip install ansible-lint \
+  && deactivate
+  
+CMD service ssh start ; bash
