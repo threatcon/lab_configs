@@ -13,7 +13,7 @@
  1. test by typing ssh alias (alias being the alias you gave the host in step 7)
  1. you should be asked to enter your password
 
-#h1 Add keys
+# Add keys
 
 1. in blink prompt, type config
 1. select keys
