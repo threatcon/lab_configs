@@ -26,12 +26,12 @@
 1. select hosts
 1. select the host you want to send the key to
 1. select save
-1. at the blink prompt type 'ssh-copy-id keyname host-alias
+1. at the blink prompt type 'ssh-copy-id keyname host-alias'
 1. press enter
 1. you may need to hit enter again
 1. type yes
 1. enter password again
 1. if you are logged into the host type exit
-1. from the blink prompt, type 'ssh host-alias you should log into the host without needing your password
+1. from the blink prompt, type 'ssh host-alias' you should log into the host without needing your password
 
 
