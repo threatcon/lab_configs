@@ -6,7 +6,7 @@
  1. add new hosts
  1. give host an alias 
  1. under hostname type either the hostname or ip address
- 1. change port if not using default ssh port
+ 1. change port if not using default ssh ort
  1. enter user name
  1. leave password blank
  1. click save
