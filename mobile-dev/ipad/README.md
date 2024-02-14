@@ -36,11 +36,11 @@
   <h3 align="center">The iPad of Things</h3>
 
   <p align="left">
-    My personal repo of development related iPad tools.<br /> 
-    Don't ask why I would torture myself developing on an iPad, I just do.<br />
-	  It is not some awesome revolutionary device that will make you a development< br/> 
-    Giga Chad. My wife owned an 11" iPad Pro, decided she wanted the 12.9" < br/>
-    and I ended up with the 11" and now I'm here. "The End" < br/>
+    My personal repo of development related iPad tools. <br /> 
+    Don't ask why I would torture myself developing on an iPad, I just do. <br />
+	  It is not some awesome revolutionary device that will make you a development <br /> 
+    Giga Chad. My wife owned an 11" iPad Pro, decided she wanted the 12.9" <br />
+    and I ended up with the 11" and now I'm here. "The End" <br />
     <br /><br />
     ·
     <a href="https://github.com/threatcon/ansible/issues">Report Bug</a>
