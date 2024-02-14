@@ -41,40 +41,13 @@
 	  It is not some awesome revolutionary device that will make you a development <br /> 
     Giga Chad. My wife owned an 11" iPad Pro, decided she wanted the 12.9" <br />
     and I ended up with the 11" and now I'm here. "The End" <br />
-    <br /><br />
+    <br />
     ·
-    <a href="https://github.com/threatcon/ansible/issues">Report Bug</a>
+    <a href="https://github.com/threatcon/lab_configs/issues">Report Bug</a>
     ·
-    <a href="https://github.com/threatcon/ansible/issues">Request Feature</a><br />
+    <a href="https://github.com/threatcon/lab_configs/issues">Request Feature</a><br />
   </p>
 </div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-      </ul>
-    </li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -82,39 +55,13 @@
 
 ![Product][product-screenshot]
 
-I got tired of writing snippets in OneNote or Notepad++ so I'm putting all my findings here and sharing it with the world.
-Or at least with you. (See what I did there?!)
+I figured I'd share my journey of turning an iPad to a "dev" machine. 
 
 Here's why:
-* If I take the time to figure out something, I'm going to use it again, whether I need to or not
-* Now all my favorite snippets are in one place and guess what? I'll use Ansible to bootstrap all my projects with this stuff! Ansible FTW!
-* You should implement DRY principles to the rest of your life :smile:
+* There are a lot of low quality applications that try but miss the mark.
+* Misery love's company, come join the party!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-This repo is a collection of Ansible playbooks, roles, tasks and Jinja templates. Credit is given to the source of any code from other authors.
-
-* [![Ansible][Ansible]][Ansible-url]
-* [![Jinja][Jinja]][Jinja-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-The code provided assumes you have a basic understanding of Ansible. This is a personal repo I am sharing, and not meant to be a tutorial. 
-I have a full time job so any support will be limited with no implied warranties or guarantees.
-
-### Prerequisites
-
-Since this is an Ansible repo... Ansible. Any code developed on or for a specific version will be annotated.
-Code from other authors will have as much information about tested versions as provided by the original author.
 
 
 <!-- ROADMAP -->
@@ -122,7 +69,7 @@ Code from other authors will have as much information about tested versions as p
 
 - [x] Add Changelog
 
-See the [open issues](https://github.com/threatcon/ansible/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/threatcon/lab_configs/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,7 +107,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Antonio Turner 
 
-Project Link: [https://github.com/threatcon/ansible](https://github.com/threatcon/ansible)
+Project Link: [https://github.com/threatcon/lab_configs](https://github.com/threatcon/lab_configs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,16 +132,16 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/threatcon/ansible.svg?style=for-the-badge
-[contributors-url]: https://github.com/threatcon/ansible/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/threatcon/ansible.svg?style=for-the-badge
-[forks-url]: https://github.com/threatcon/ansible/network/members
-[stars-shield]: https://img.shields.io/github/stars/threatcon/ansible.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/threatcon/lab_configs.svg?style=for-the-badge
+[contributors-url]: https://github.com/threatcon/lab_configs/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/threatcon/lab_configs.svg?style=for-the-badge
+[forks-url]: https://github.com/threatcon/lab_configs/network/members
+[stars-shield]: https://img.shields.io/github/stars/threatcon/lab_configs.svg?style=for-the-badge
 [stars-url]: https://github.com/threatcon/ansible/stargazers
-[issues-shield]: https://img.shields.io/github/issues/threatcon/ansible.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/threatcon/lab_configs.svg?style=for-the-badge
 [issues-url]: https://github.com/threatcon/ansible/issues
-[license-shield]: https://img.shields.io/github/license/threatcon/ansible.svg?style=for-the-badge
-[license-url]: https://github.com/threatcon/ansible/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/threatcon/lab_configs.svg?style=for-the-badge
+[license-url]: https://github.com/threatcon/lab_configs/blob/master/LICENSE.txt
 [product-screenshot]: images/IMG_2113.png
 [Ansible]: https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=61DAFB
 [Ansible-url]: https://www.ansible.com/
