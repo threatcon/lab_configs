@@ -58,7 +58,6 @@ Set-PSReadLineOption -EditMode Windows
 
 # Functions
 function Start-DailyApps { 
-    $MUSICAPP = 'C:\Users\otek\AppData\Local\Programs\Plexamp\Plexamp.exe'
     $teamsCheck = Get-Process -Name ms-teams -ErrorAction SilentlyContinue
     $plexCheck = Get-Process -Name "Plexamp" -ErrorAction SilentlyContinue
     $adBrokerCheck = Get-Process -Name Microsoft.AAD.BrokerPlugin.exe -ErrorAction SilentlyContinue
@@ -75,10 +74,8 @@ function Start-DailyApps {
         stop-process -Name Microsoft.AAD.BrokerPlugin.exe
     }            
 
-    start-process $MUSICAPP
     start-process ms-teams
 
-    Remove-Variable MUSICAPP
     Remove-Variable teamsCheck
     Remove-Variable plexCheck
     Remove-Variable adBrokerCheck
@@ -88,7 +85,7 @@ function Start-RemoteApps {
     
     $cred = Import-Clixml ''
     
-    Invoke-Command -ComputerName JMT_18 -credential $cred -ScriptBlock {
+    Invoke-Command -ComputerName XXXX -credential $cred -ScriptBlock {
         Start-ScheduledTask -TaskName Start-DailyApps
     } 
 	    Remove-Variable cred           
@@ -104,10 +101,7 @@ function jump {
 
     if ($args -eq 'pics') {
         $JUMPTO = $PHOTOFOLDER
-    }            
-    elseif ($args -eq 'bv') {
-        $JUMPTO = $WORKFOLDER1
-    }            
+    }                      
     elseif ($args -eq 'par') {
         $JUMPTO = $WORKFOLDER3
     }            
@@ -124,8 +118,8 @@ function jump {
     explorer.exe $JUMPTO
 }            
 
-function Philips: { Set-Location Philips: }
-function BV: { Set-Location BV: }
+function Philips: { Set-Location  $WORKFOLDER: }
+function BV: { Set-Location  $WORKFOLDER2: }
 function cd... { Set-Location ..\.. }
 function cd.... { Set-Location ..\..\.. }
 
