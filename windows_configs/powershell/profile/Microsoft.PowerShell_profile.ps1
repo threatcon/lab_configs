@@ -12,17 +12,8 @@ Import-Module -Name Terminal-Icons
 
 # Set variables
 $EDITOR = 'code'
-$WORKROOT1 = ''
-$WORKROOT2 = ''
-$PHOTOFOLDER = ''
-$HOMEFOLDER = ''
-$WORKFOLDER1 = ''
-$WORKFOLDER3 = ''
-$WORKFOLDER2 = ''
 
 $VISIOAPP = 'C:\Program Files\Microsoft Office\root\Office16\VISIO.EXE'
-$EXCELAPP 
-$WORDAPP
 
 ## Find out if the current user identity is elevated (has admin rights)
 $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
@@ -36,8 +27,8 @@ if ($isAdmin) {
 
 
 # Set commands
-New-PSDrive -Name  -PSProvider FileSystem -Root $WORKROOT1 -Description '' | Out-Null
-New-PSDrive -Name  -PSProvider FileSystem -Root $WORKROOT2 -Description '' | Out-Null
+# New-PSDrive -Name  -PSProvider FileSystem -Root $WORKROOT1 -Description '' | Out-Null
+# New-PSDrive -Name  -PSProvider FileSystem -Root $WORKROOT2 -Description '' | Out-Null
 
 ## Aliases
 
@@ -59,15 +50,10 @@ Set-PSReadLineOption -EditMode Windows
 # Functions
 function Start-DailyApps { 
     $teamsCheck = Get-Process -Name ms-teams -ErrorAction SilentlyContinue
-    $plexCheck = Get-Process -Name "Plexamp" -ErrorAction SilentlyContinue
     $adBrokerCheck = Get-Process -Name Microsoft.AAD.BrokerPlugin.exe -ErrorAction SilentlyContinue
     
     if ($teamsCheck) {
         stop-process -Name ms-teams
-    }            
-    
-    if ($plexCheck) {
-        stop-process -Name "Plexamp"
     }            
     
     if ($adBrokerCheck) {
@@ -77,49 +63,19 @@ function Start-DailyApps {
     start-process ms-teams
 
     Remove-Variable teamsCheck
-    Remove-Variable plexCheck
     Remove-Variable adBrokerCheck
 }            
-
-function Start-RemoteApps {
-    
-    $cred = Import-Clixml ''
-    
-    Invoke-Command -ComputerName XXXX -credential $cred -ScriptBlock {
-        Start-ScheduledTask -TaskName Start-DailyApps
-    } 
-	    Remove-Variable cred           
-}            
+            
 
 function draw {
 
 
     start-process $VISIOAPP $args
 }            
+           
 
-function jump {
-
-    if ($args -eq 'pics') {
-        $JUMPTO = $PHOTOFOLDER
-    }                      
-    elseif ($args -eq 'par') {
-        $JUMPTO = $WORKFOLDER3
-    }            
-    elseif ($args -eq 'west') {
-        $JUMPTO = $WORKFOLDER2
-    }            
-    elseif ($args -eq 'home') {
-        $JUMPTO = $HOMEFOLDER
-    }            
-    else {
-        $JUMPTO = $args
-    }            
-
-    explorer.exe $JUMPTO
-}            
-
-function Philips: { Set-Location  $WORKFOLDER: }
-function BV: { Set-Location  $WORKFOLDER2: }
+# function Philips: { Set-Location  $WORKFOLDER: }
+# function BV: { Set-Location  $WORKFOLDER2: }
 function cd... { Set-Location ..\.. }
 function cd.... { Set-Location ..\..\.. }
 
